@@ -109,3 +109,35 @@
     =>
     (printout t crlf "Hasil Prediksi = Chronic infection" crlf)
 )
+
+(defrule print-cured "Prediction is Cured"
+    (HBsAg (value negative))
+    (anti-HBs (value positive))
+    (anti-HBc (value positive))
+    =>
+    (printout t crlf "Hasil Prediksi = Cured" crlf)
+)
+
+(defrule print-vaccinated "Prediction is Vaccinated"
+    (HBsAg (value negative))
+    (anti-HBs (value positive))
+    (anti-HBc (value negative))
+    =>
+    (printout t crlf "Hasil Prediksi = Vaccinated" crlf)
+)
+
+(defrule print-unclear-possible-resolved "Prediction is Unclear (possible resolved)"
+    (HBsAg (value negative))
+    (anti-HBs (value negative))
+    (anti-HBc (value positive))
+    =>
+    (printout t crlf "Hasil Prediksi = Unclear (possible resolved)" crlf)
+)
+
+(defrule print-healthy-not-vaccinated-or-suspicous "Prediction is Healthy (not vaccinated or suspicious)"
+    (HBsAg (value negative))
+    (anti-HBs (value negative))
+    (anti-HBc (value negative))
+    =>
+    (printout t crlf "Hasil Prediksi = Healthy (not vaccinated or suspicious)" crlf)
+)
