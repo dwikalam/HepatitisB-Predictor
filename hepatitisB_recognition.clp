@@ -38,8 +38,18 @@
 )
 
 (defrule get-anti-HBc "Get anti-HBc"
-    (HBsAg (value positive))
-    (anti-HDV (value negative))
+    ( or 
+        ( and
+            (HBsAg (value positive))
+            (anti-HDV (value negative))
+        ) ( and
+            (HBsAg (value negative))
+            (anti-HBs (value positive))
+        ) ( and
+            (HBsAg (value negative))
+            (anti-HBs (value negative))
+        )
+    )
     =>
     (printout t "anti-HBc? ")
     (bind ?value (read))
@@ -47,9 +57,15 @@
 )
 
 (defrule get-anti-HBs "Get anti-HBs"
-    (HBsAg (value positive))
-    (anti-HDV (value negative))
-    (anti-HBc (value positive))
+    ( or
+        ( and
+            (HBsAg (value positive))
+            (anti-HDV (value negative))
+            (anti-HBc (value positive))
+        ) ( and
+            (HBsAg (value negative))
+        )
+    )
     =>
     (printout t "anti-HBs? ")
     (bind ?value (read))
