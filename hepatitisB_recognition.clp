@@ -37,31 +37,31 @@
     (assert (anti-HDV (value ?value)))
 )
 
-/* (defrule get-anti-HBs "Get anti-HBs" */
-/*     (HBsAg (value negative)) */
-/*     => */
-/*     (printout t "anti-HBs? ") */
-/*     (bind ?value (read)) */
-/*     (assert (anti-HBs (value ?value))) */
-/* ) */
+; (defrule get-anti-HBs "Get anti-HBs"
+;     (HBsAg (value negative))
+;     =>
+;     (printout t "anti-HBs? ")
+;     (bind ?value (read))
+;     (assert (anti-HBs (value ?value)))
+; )
 
-/* (defrule get-anti-HBc "Get anti-HBc" */
-/*     (HBsAg (value negative)) */
-/*     (anti-HBs (value positive)) */
-/*     => */
-/*     (printout t "anti-HBc? ") */
-/*     (bind ?value (read)) */
-/*     (assert (anti-HBc (value ?value))) */
-/* ) */
-/**/
-/* (defrule get-anti-HBc "Get anti-HBc" */
-/*     (HBsAg (value negative)) */
-/*     (anti-HBs (value negative)) */
-/*     => */
-/*     (printout t "anti-HBc? ") */
-/*     (bind ?value (read)) */
-/*     (assert (anti-HBc (value ?value))) */
-/* ) */
+; (defrule get-anti-HBc "Get anti-HBc"
+;     (HBsAg (value negative))
+;     (anti-HBs (value positive))
+;     =>
+;     (printout t "anti-HBc? ")
+;     (bind ?value (read))
+;     (assert (anti-HBc (value ?value)))
+; )
+; 
+; (defrule get-anti-HBc "Get anti-HBc"
+;     (HBsAg (value negative))
+;     (anti-HBs (value negative))
+;     =>
+;     (printout t "anti-HBc? ")
+;     (bind ?value (read))
+;     (assert (anti-HBc (value ?value)))
+; )
 
 (defrule get-anti-HBc "Get anti-HBc"
     ( or 
