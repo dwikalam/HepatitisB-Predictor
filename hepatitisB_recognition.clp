@@ -137,7 +137,7 @@
     (anti-HDV (value negative))
     (anti-HBc (value positive))
     (anti-HBs (value negative))
-    (anti-HBs (value negative))
+    (IgM-anti-HBc (value positive))
     =>
     (printout t crlf "Hasil Prediksi = Acute infection" crlf)
 )
@@ -147,7 +147,7 @@
     (anti-HDV (value negative))
     (anti-HBc (value positive))
     (anti-HBs (value negative))
-    (anti-HBs (value positive))
+    (IgM-anti-HBc (value negative))
     =>
     (printout t crlf "Hasil Prediksi = Chronic infection" crlf)
 )
